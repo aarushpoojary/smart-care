@@ -1,5 +1,5 @@
 
-/* SMARTCARE - ROYAL BLUE DESIGN */
+/* EasyCare - ROYAL BLUE DESIGN */
 
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
 
@@ -393,7 +393,7 @@ footer {
     }
 }
 
-/* SMARTCARE HERO VISUAL */
+/* EasyCare HERO VISUAL */
 
 .hero {
     display: flex;
@@ -489,7 +489,7 @@ footer {
         height: 250px;
     }
 }
-/* ABOUT SMARTCARE SECTION */
+/* ABOUT EasyCare SECTION */
 
 .about-section {
     padding: 70px 8%;
@@ -527,7 +527,7 @@ footer {
     scroll-margin-top: 110px;
 }
 
-/* SMARTCARE LOGIN POPUP */
+/* EasyCare LOGIN POPUP */
 
 .login-modal {
     display: none;
