@@ -1,0 +1,618 @@
+
+/* SMARTCARE - ROYAL BLUE DESIGN */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+:root {
+    --navy: #172554;
+    --blue: #2563EB;
+    --light-blue: #DBEAFE;
+    --background: #F5F8FF;
+    --white: #FFFFFF;
+    --text: #1E293B;
+    --muted: #64748B;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background: var(--background);
+    color: var(--text);
+}
+
+/* NAVIGATION */
+
+.navbar {
+    background: var(--white);
+    padding: 20px 7%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 3px 20px rgba(23, 37, 84, 0.06);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.logo {
+    font-size: 27px;
+    font-weight: 800;
+    color: var(--navy);
+}
+
+.logo span {
+    color: var(--blue);
+}
+
+nav {
+    display: flex;
+    gap: 30px;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--muted);
+    font-size: 14px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: var(--blue);
+}
+
+.login-btn,
+.primary-btn {
+    background: var(--blue);
+    color: white;
+    border: none;
+    padding: 13px 23px;
+    border-radius: 9px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.login-btn:hover,
+.primary-btn:hover {
+    background: var(--navy);
+    transform: translateY(-2px);
+}
+
+/* HERO SECTION */
+
+.hero {
+    margin: 35px 5%;
+    padding: 90px 8%;
+    min-height: 420px;
+    border-radius: 24px;
+    background: linear-gradient(120deg, #172554, #2563EB);
+    color: white;
+    display: flex;
+    align-items: center;
+}
+
+.hero-content {
+    max-width: 650px;
+}
+
+.tagline {
+    color: #BFDBFE;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    margin-bottom: 20px;
+}
+
+.hero h1 {
+    font-size: clamp(36px, 5vw, 58px);
+    line-height: 1.15;
+    margin-bottom: 20px;
+}
+
+.hero h1 span {
+    color: #BFDBFE;
+}
+
+.description {
+    color: #DBEAFE;
+    line-height: 1.8;
+    font-size: 16px;
+    max-width: 490px;
+    margin-bottom: 28px;
+}
+
+.primary-btn {
+    background: white;
+    color: var(--navy);
+    padding: 15px 25px;
+}
+
+/* HOSPITAL SEARCH */
+
+.search-section {
+    background: white;
+    margin: 45px 8%;
+    padding: 40px;
+    border-radius: 18px;
+    text-align: center;
+    box-shadow: 0 8px 30px rgba(23, 37, 84, 0.05);
+}
+
+.search-section h2,
+.services h2 {
+    color: var(--navy);
+    font-size: 27px;
+    margin-bottom: 12px;
+}
+
+.search-section > p {
+    color: var(--muted);
+    margin-bottom: 25px;
+}
+
+.search-box {
+    display: flex;
+    max-width: 650px;
+    margin: auto;
+    gap: 10px;
+}
+
+.search-box input {
+    flex: 1;
+    min-width: 0;
+    padding: 16px;
+    border: 1px solid #CBD5E1;
+    border-radius: 9px;
+    outline: none;
+    font-size: 14px;
+}
+
+.search-box input:focus {
+    border-color: var(--blue);
+}
+
+.search-box button {
+    background: var(--blue);
+    color: white;
+    border: none;
+    padding: 15px 22px;
+    border-radius: 9px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+/* SERVICE CARDS */
+
+.services {
+    padding: 55px 8%;
+    text-align: center;
+}
+
+.service-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    margin-top: 35px;
+}
+
+.service-card {
+    background: white;
+    padding: 30px 20px;
+    border-radius: 16px;
+    text-align: left;
+    border: 1px solid #E2E8F0;
+    transition: 0.3s;
+}
+
+.service-card:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 12px 30px rgba(37, 99, 235, 0.12);
+    border-color: #BFDBFE;
+}
+
+.service-card h3 {
+    color: var(--navy);
+    font-size: 17px;
+    margin-bottom: 14px;
+}
+
+.service-card p {
+    color: var(--muted);
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+/* FOOTER */
+
+footer {
+    background: var(--navy);
+    color: #DBEAFE;
+    padding: 28px;
+    text-align: center;
+    font-size: 13px;
+    margin-top: 50px;
+}
+
+/* MOBILE RESPONSIVE DESIGN */
+
+@media (max-width: 850px) {
+    nav {
+        gap: 12px;
+        flex-wrap: wrap;
+    }
+
+    .service-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .navbar {
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+
+    nav {
+        width: 100%;
+    }
+
+    .hero {
+        padding: 55px 25px;
+    }
+
+    .search-section {
+        margin: 25px 5%;
+        padding: 25px 18px;
+    }
+
+    .search-box {
+        flex-direction: column;
+    }
+
+    .service-container {
+        grid-template-columns: 1fr;
+    }
+}
+/* FIND HOSPITALS SECTION */
+
+.hospitals-section {
+    padding: 70px 8%;
+    background: #F5F8FF;
+}
+
+.section-heading {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.section-heading .tagline {
+    color: #2563EB;
+}
+
+.section-heading h2 {
+    color: #172554;
+    font-size: 32px;
+    margin: 15px 0;
+}
+
+.section-heading p {
+    color: #64748B;
+}
+
+.hospital-search {
+    display: flex;
+    max-width: 650px;
+    margin: 0 auto 40px;
+    gap: 12px;
+}
+
+.hospital-search input {
+    flex: 1;
+    min-width: 0;
+    padding: 16px;
+    border: 1px solid #CBD5E1;
+    border-radius: 10px;
+    font-size: 14px;
+}
+
+.hospital-search button,
+.hospital-card button {
+    background: #2563EB;
+    color: white;
+    border: none;
+    padding: 14px 22px;
+    border-radius: 9px;
+    cursor: pointer;
+}
+
+.hospital-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+}
+
+.hospital-card {
+    background: white;
+    padding: 28px;
+    border-radius: 16px;
+    border: 1px solid #E2E8F0;
+    transition: 0.3s;
+}
+
+.hospital-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 25px rgba(37, 99, 235, 0.12);
+}
+
+.hospital-icon {
+    font-size: 35px;
+}
+
+.hospital-card h3 {
+    color: #172554;
+    margin: 16px 0 8px;
+}
+
+.hospital-card p {
+    color: #64748B;
+    margin-bottom: 15px;
+}
+
+.hospital-type {
+    display: inline-block;
+    background: #DBEAFE;
+    color: #1D4ED8;
+    padding: 7px 11px;
+    border-radius: 20px;
+    font-size: 12px;
+    margin-bottom: 20px;
+}
+
+.hospital-card button {
+    display: block;
+    width: 100%;
+}
+
+@media (max-width: 750px) {
+    .hospital-cards {
+        grid-template-columns: 1fr;
+    }
+
+    .hospital-search {
+        flex-direction: column;
+    }
+}
+
+/* SMARTCARE HERO VISUAL */
+
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.hero-content {
+    flex: 1;
+}
+
+.hero-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.image-circle {
+    width: 330px;
+    height: 330px;
+    border-radius: 50%;
+    background: #DBEAFE;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+}
+
+.doctor-placeholder {
+    font-size: 130px;
+    text-align: center;
+    animation: floatDoctor 3s ease-in-out infinite;
+}
+
+.doctor-placeholder span {
+    display: block;
+    font-size: 13px;
+    color: #172554;
+    font-weight: bold;
+}
+
+.medical-icon,
+.medical-heart,
+.medical-plus {
+    position: absolute;
+    background: white;
+    color: #2563EB;
+    border-radius: 50%;
+    width: 48px;
+    height: 48px;
+    display: grid;
+    place-items: center;
+    font-size: 27px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    animation: floatDoctor 3s ease-in-out infinite;
+}
+
+.medical-icon {
+    top: 35px;
+    left: 15px;
+}
+
+.medical-heart {
+    right: 15px;
+    top: 90px;
+}
+
+.medical-plus {
+    bottom: 35px;
+    right: 35px;
+}
+
+@keyframes floatDoctor {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-12px);
+    }
+}
+
+@media (max-width: 700px) {
+    .hero {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .image-circle {
+        width: 250px;
+        height: 250px;
+    }
+}
+/* ABOUT SMARTCARE SECTION */
+
+.about-section {
+    padding: 70px 8%;
+    background: #EFF6FF;
+    text-align: center;
+}
+
+.about-content {
+    max-width: 800px;
+    margin: auto;
+}
+
+.about-content h2 {
+    font-size: 32px;
+    color: #172554;
+    margin: 15px 0;
+}
+
+.about-content p {
+    font-size: 16px;
+    line-height: 1.8;
+    color: #475569;
+}
+
+.about-content .tagline {
+    color: #2563EB;
+    font-weight: bold;
+    letter-spacing: 2px;
+    font-size: 13px;
+}
+/* FIX NAVIGATION SCROLL POSITION */
+
+#appointments,
+#hospitals {
+    scroll-margin-top: 110px;
+}
+
+/* SMARTCARE LOGIN POPUP */
+
+.login-modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(15, 23, 42, 0.65);
+    justify-content: center;
+    align-items: center;
+}
+
+.login-box {
+    background: white;
+    width: 90%;
+    max-width: 400px;
+    padding: 35px;
+    border-radius: 18px;
+    text-align: center;
+    position: relative;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.2);
+}
+
+.login-box h2 {
+    color: #1D4ED8;
+    margin-bottom: 10px;
+}
+
+.login-box p {
+    color: #64748B;
+    margin-bottom: 20px;
+}
+
+.login-box input {
+    width: 100%;
+    padding: 13px;
+    margin: 8px 0;
+    border: 1px solid #CBD5E1;
+    border-radius: 8px;
+    box-sizing: border-box;
+}
+
+.login-box button:not(.close-login) {
+    width: 100%;
+    padding: 13px;
+    margin-top: 15px;
+    background: #2563EB;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.close-login {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    background: none;
+    border: none;
+    font-size: 25px;
+    cursor: pointer;
+    color: #64748B;
+}
+/* LOGIN AND SIGNUP TABS */
+
+.login-tabs {
+    display: flex;
+    gap: 10px;
+    margin: 20px 0;
+}
+
+.login-tabs button {
+    flex: 1;
+    padding: 11px;
+    border: none;
+    border-radius: 8px;
+    background: #DBEAFE;
+    color: #1D4ED8;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.login-tabs button:hover {
+    background: #2563EB;
+    color: white;
+}
